@@ -1,0 +1,16 @@
+#Playbook for Installing Openstack
+---
+- hosts: keystone
+  become: true
+  roles:
+    - role: keystone
+
+- hosts: glance
+  become: true
+  roles:
+    - role: glance
+
+- hosts: nova
+  become: true
+  roles:
+    - role: nova
